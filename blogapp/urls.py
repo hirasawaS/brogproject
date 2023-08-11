@@ -25,6 +25,6 @@ urlpatterns = [
     "music-list/" ,
     views.MusicView.as_view(),
     name="music"
-    )
-    
+    ),
+    path('contact/' , views.ContactView.as_view() , name='contact')
 ]

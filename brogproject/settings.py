@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+from django.contrib.messages import constants
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -164,3 +165,9 @@ LOGGING = {
         },
     },
 }
+
+MESSAGE_TAGS = {
+        constants.SUCCESS: 'aleart aleart-success'
+    }
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
